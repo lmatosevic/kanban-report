@@ -5,15 +5,12 @@ Output is generated to stdout with statistics about users and completed tasks wi
 ## 1. Installation
 To install this command line tool, run following command using PIP Installs Python (pip):
 
-```
-pip install kanban-report
-```
+`pip install kanban-report`
+
 Or you can install module using only python. First, clone project using git:
 
-```
-git clone https://gitlab.com/int-rev/kanban-report.git
-```
+`git clone https://gitlab.com/int-rev/kanban-report.git`
+
 and then open terminal in newly downloaded folder and run following commnad:
-```
-python setup.py install
-```
+
+`python setup.py install`
