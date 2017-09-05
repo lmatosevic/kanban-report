@@ -31,4 +31,4 @@ optional arguments:
 
 Example usage:
 
-`kanban-report -f report.html --root html`
+`kanban-report -f report.html --root body`
