@@ -18,7 +18,7 @@ and then open terminal in newly downloaded folder and run following commnad:
 `python setup.py install`
 
 ## Usage
-Usage is very simple, just download html report from kanban-flow web app (Reports->Print) and copy paste html content into file ond disk.
+Usage is very simple, just download html report from kanban-flow web app (Reports->Print) then copy and paste html content into file ond disk.
 
 ```
 usage: kanban-report-script.py [-h] -f FILE [-r ROOT]
