@@ -12,8 +12,8 @@ class Main:
 
     def run(self):
         parser = argparse.ArgumentParser()
-        parser.add_argument("-f", "--file", help="Input html file with print report", required=True)
-        parser.add_argument("-r", "--root", help="Root element in provided xml dom", required=False)
+        parser.add_argument("-f", "--file", help="input html file location with print report html", required=True)
+        parser.add_argument("-t", "--tag", help="tag element to iterate in dom", required=False, default="ul")
         args = parser.parse_args()
 
         file = open(args.file, mode="r", encoding="UTF-8")
@@ -22,10 +22,10 @@ class Main:
         last_task_name = ""
         last_user_name = ""
 
-        for element in root.iter(args.root if args.root is not None else "ul"):
+        for element in root.iter(args.tag):
             if element.tag == "h3" and element.attrib["class"] == "task-name":
                 last_task_name = element.text
-            if element.attrib["class"] == "task-section task-smallProperties":
+            if "class" in element.attrib and element.attrib["class"] == "task-section task-smallProperties":
                 for item in element.iter("li"):
                     label = item.find(".//div[@class='propertyLabel']").text
                     value = item.find(".//div[@class='propertyValue']").text

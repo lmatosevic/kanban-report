@@ -21,14 +21,14 @@ and then open terminal in newly downloaded folder and run following commnad:
 Usage is very simple, just download html report from kanban-flow web app (Reports->Print and filter results by only user, time spent and task name) then copy and paste html content into file ond disk.
 
 ```
-usage: kanban-report-script.py [-h] -f FILE [-r ROOT]
+usage: kanban-report [-h] -f FILE [-t TAG]
 
 optional arguments:
   -h, --help            show this help message and exit
-  -f FILE, --file FILE  Input html file with print report
-  -r ROOT, --root ROOT  Root element in provided xml dom
+  -f FILE, --file FILE  input html file location with print report html
+  -t TAG, --tag TAG     tag element to iterate in dom
 ```
 
 Example usage:
 
-`kanban-report -f report.html --root body`
+`kanban-report -f report.html --tag ul`
