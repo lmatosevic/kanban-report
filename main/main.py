@@ -17,7 +17,7 @@ class Main:
         args = parser.parse_args()
 
         file = open(args.file, mode="r", encoding="UTF-8")
-        root = etree.XML(file.read())
+        root = etree.HTML(file.read())
 
         last_task_name = ""
         last_user_name = ""
